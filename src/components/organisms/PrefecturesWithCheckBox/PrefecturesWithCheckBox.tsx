@@ -2,6 +2,7 @@ import React from 'react'
 
 import { CheckBoxWithLabel } from 'src/components/molcules/CheckBoxWithLabel/CheckBoxWithLabel'
 import { checkedPrefecturesTypes, fetchDataType } from 'src/types/mainTypes'
+import styles from './PrefecturesWithCheckBox.module.scss'
 
 interface PropsTypes {
   prefecturesData: fetchDataType
@@ -15,7 +16,7 @@ export const PrefecturesWithCheckBox = ({
   checkedPrefectures,
 }: PropsTypes) => {
   return (
-    <article>
+    <article className={styles.container}>
       {prefecturesData.result.map((data: checkedPrefecturesTypes) => (
         <div key={data.prefName}>
           <CheckBoxWithLabel
