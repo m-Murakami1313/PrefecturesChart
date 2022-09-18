@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CheckBox } from 'src/components/atom/CheckBox/CheckBox'
+import { CheckBoxWithLabel } from 'src/components/molcules/CheckBoxWithLabel/CheckBoxWithLabel'
 import { checkedPrefecturesTypes, fetchDataType } from 'src/types/mainTypes'
 
 interface PropsTypes {
@@ -15,21 +15,16 @@ export const PrefecturesWithCheckBox = ({
   checkedPrefectures,
 }: PropsTypes) => {
   return (
-    <div>
+    <article>
       {prefecturesData.result.map((data: checkedPrefecturesTypes) => (
         <div key={data.prefName}>
-          <input
-            id={data.prefCode}
-            type='checkbox'
-            onChange={handleCheckData}
-            checked={checkedPrefectures.some(
-              (checked: checkedPrefecturesTypes) => checked.prefCode === data.prefCode.toString(),
-            )}
-            value={data.prefName}
+          <CheckBoxWithLabel
+            data={data}
+            handleCheckData={handleCheckData}
+            checkedPrefectures={checkedPrefectures}
           />
-          <label htmlFor={data.prefCode}>{data.prefName}</label>
         </div>
       ))}
-    </div>
+    </article>
   )
 }
