@@ -2,19 +2,21 @@ import React from 'react'
 
 import { PrefecturesWithCheckBox } from 'src/components/organisms/PrefecturesWithCheckBox/PrefecturesWithCheckBox'
 import { useFetchAPIDATA } from 'src/hooks/useFetchAPIDATA'
-import { useRESASAPIData } from 'src/hooks/useFirstAPIData'
+import { useFirstAPIData } from 'src/hooks/useFirstAPIData'
 
 export const Main = () => {
-  const { fetchData } = useRESASAPIData()
+  const { fetchData } = useFirstAPIData()
   const { handleCheckData, checkedPrefectures } = useFetchAPIDATA()
 
   return (
     <section>
-      <PrefecturesWithCheckBox
-        prefecturesData={fetchData}
-        handleCheckData={handleCheckData}
-        checkedPrefectures={checkedPrefectures}
-      />
+      {fetchData && (
+        <PrefecturesWithCheckBox
+          prefecturesData={fetchData}
+          handleCheckData={handleCheckData}
+          checkedPrefectures={checkedPrefectures}
+        />
+      )}
     </section>
   )
 }
