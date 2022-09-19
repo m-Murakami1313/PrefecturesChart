@@ -15,9 +15,6 @@ export const CheckBoxWithLabel = ({ data, handleCheckData, checkedPrefectures }:
         id={data.prefCode}
         type='checkbox'
         onChange={handleCheckData}
-        checked={checkedPrefectures.some(
-          (checked: checkedPrefecturesTypes) => checked.prefCode === data.prefCode.toString(),
-        )}
         value={data.prefName}
       />
       <label htmlFor={data.prefCode}>{data.prefName}</label>
