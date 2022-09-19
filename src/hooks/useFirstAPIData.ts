@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react'
 import { fetchDataType } from 'src/types/mainTypes'
 
 export const useFirstAPIData = () => {
-  const [fetchData, setFetchData] = useState<fetchDataType | undefined>({
-    result: [{ prefCode: '', prefName: '' }],
-  })
+  const [fetchData, setFetchData] = useState<fetchDataType | undefined>()
 
   const fetchPrefectureData = async (): Promise<fetchDataType | undefined> => {
     const url = `https://opendata.resas-portal.go.jp/api/v1/prefectures`
