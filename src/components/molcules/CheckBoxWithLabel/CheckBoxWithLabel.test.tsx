@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { CheckBoxWithLabel } from './CheckBoxWithLabel'
 
 describe('CheckBox', () => {
@@ -7,13 +7,14 @@ describe('CheckBox', () => {
   const jestHandleCheckData = jest.fn()
 
   test('CheckBoxのラベルに文字が表示されているか', () => {
-    const { getByText } = render(
+    render(
       <CheckBoxWithLabel
         data={dummyData}
         checkedPrefectures={dummyCheckedPrefectures}
         handleCheckData={jestHandleCheckData}
       />,
     )
-    expect(getByText('Tokyo')).toBeTruthy()
+    const text = screen.getByLabelText('Tokyo')
+    expect(text).toBeTruthy()
   })
 })
