@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import { Header } from 'src/components/templates/Header/Header'
-import { Main } from 'src/components/templates/Main/Main'
+import { Header } from '@/components/templates/Header/Header'
+import { Main } from '@/components/templates/Main/Main'
 
 export default function Home() {
   return (

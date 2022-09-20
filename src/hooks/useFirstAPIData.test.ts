@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { fetchDataType } from 'src/types/mainTypes'
+import { fetchDataType } from '@/types/mainTypes'
 
 import { useFirstAPIData } from './useFirstAPIData'
 

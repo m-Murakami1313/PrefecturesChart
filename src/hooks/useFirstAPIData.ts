@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { fetchDataType } from 'src/types/mainTypes'
+import { fetchDataType } from '@/types/mainTypes'
 
 export const useFirstAPIData = () => {
   const [fetchData, setFetchData] = useState<fetchDataType | undefined>()

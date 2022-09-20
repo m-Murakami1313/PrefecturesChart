@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { checkedPrefecturesTypes, fetchDataType } from 'src/types/mainTypes'
+import { checkedPrefecturesTypes, fetchDataType } from '@/types/mainTypes'
 import { PrefecturesWithCheckBox } from './PrefecturesWithCheckBox'
 
 describe('PrefecturesWithCheckBox', () => {

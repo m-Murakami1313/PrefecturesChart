@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { CheckBoxWithLabel } from '../../molcules/CheckBoxWithLabel/CheckBoxWithLabel'
-import { checkedPrefecturesTypes, fetchDataType } from '../../../types/mainTypes'
+import { CheckBoxWithLabel } from '@/components/molcules/CheckBoxWithLabel/CheckBoxWithLabel'
+import { checkedPrefecturesTypes, fetchDataType } from '@/types/mainTypes'
 import styles from './PrefecturesWithCheckBox.module.scss'
 
 interface PropsTypes {

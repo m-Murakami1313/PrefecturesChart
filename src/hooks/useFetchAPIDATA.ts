@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { checkedPrefecturesTypes, prefecturesDataTypes } from 'src/types/mainTypes'
+import { checkedPrefecturesTypes, prefecturesDataTypes } from '@/types/mainTypes'
 
 export const useFetchAPIData = () => {
   const [checkedPrefectures, setCheckedPrefectures] = useState<checkedPrefecturesTypes[]>([])
