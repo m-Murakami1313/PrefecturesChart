@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { HeaderText } from '@/components/organisms/HearderText/HeaderText'
 import styles from './Header.module.scss'
+import { HeaderText } from '@/components/organisms/HearderText/HeaderText'
 
 export const Header = () => {
   return (

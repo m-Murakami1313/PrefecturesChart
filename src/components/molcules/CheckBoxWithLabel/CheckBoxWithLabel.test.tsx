@@ -1,5 +1,5 @@
-import { CheckBoxWithLabel } from './CheckBoxWithLabel'
 import { render } from '@testing-library/react'
+import { CheckBoxWithLabel } from './CheckBoxWithLabel'
 
 describe('CheckBox', () => {
   const dummyData = { prefCode: '1', prefName: 'Tokyo' }

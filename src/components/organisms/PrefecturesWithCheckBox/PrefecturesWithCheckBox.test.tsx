@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { checkedPrefecturesTypes, fetchDataType } from '@/types/mainTypes'
 import { PrefecturesWithCheckBox } from './PrefecturesWithCheckBox'
+import { checkedPrefecturesTypes, fetchDataType } from '@/types/mainTypes'
 
 describe('PrefecturesWithCheckBox', () => {
   const fakeData: fetchDataType = {

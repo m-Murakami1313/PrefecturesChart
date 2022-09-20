@@ -1,5 +1,5 @@
-import { HeaderText } from './HeaderText'
 import { render } from '@testing-library/react'
+import { HeaderText } from './HeaderText'
 
 describe('HeaderText', () => {
   test('ヘッダーのテキストが表示される', () => {

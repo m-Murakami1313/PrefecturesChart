@@ -1,8 +1,8 @@
 import React from 'react'
 
+import styles from './PrefecturesWithCheckBox.module.scss'
 import { CheckBoxWithLabel } from '@/components/molcules/CheckBoxWithLabel/CheckBoxWithLabel'
 import { checkedPrefecturesTypes, fetchDataType } from '@/types/mainTypes'
-import styles from './PrefecturesWithCheckBox.module.scss'
 
 interface PropsTypes {
   prefecturesData: fetchDataType

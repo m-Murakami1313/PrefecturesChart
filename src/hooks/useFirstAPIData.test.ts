@@ -1,7 +1,7 @@
 import { renderHook, act } from '@testing-library/react'
+import { useFirstAPIData } from './useFirstAPIData'
 import { fetchDataType } from '@/types/mainTypes'
 
-import { useFirstAPIData } from './useFirstAPIData'
 
 describe('useFirstAPIData', () => {
   const { result } = renderHook(() => useFirstAPIData())
