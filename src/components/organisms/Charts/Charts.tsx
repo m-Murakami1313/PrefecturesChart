@@ -1,6 +1,8 @@
 import brewer from 'chartjs-plugin-colorschemes'
 import { Line } from 'react-chartjs-2'
 
+import styles from './Charts.module.scss'
+
 interface Props {
   checkedPrefectures: {
     prefCode: string
@@ -25,8 +27,6 @@ export const Charts = ({ checkedPrefectures }: Props) => {
       data: data.prefData && data.prefData[0].data.map((data) => data.value),
     }))
 
-  console.log(graphDataSets)
-
   const graphData = {
     labels: labels,
     datasets: graphDataSets,
@@ -41,14 +41,9 @@ export const Charts = ({ checkedPrefectures }: Props) => {
     },
   }
 
-  const divStyle: React.CSSProperties = {
-    margin: '10px',
-    width: '800px',
-    height: '400px',
-  }
   return (
-    <div className='App' style={divStyle}>
-      <Line height={300} width={300} data={graphData} options={options} id='chart-key' />
+    <div className={styles.chartContainner}>
+      <Line height={400} data={graphData} options={options} />
     </div>
   )
 }
