@@ -17,6 +17,7 @@ export const useFetchAPIData = () => {
           ...newData,
           { prefName: e.target.value, prefCode: e.target.id, prefData: data?.result.data },
         ])
+        console.log(data)
       }
       fetchData()
     }
@@ -29,6 +30,7 @@ export const useFetchAPIData = () => {
         headers: { 'x-api-key': process.env.NEXT_PUBLIC_RESAS_API } as HeadersInit,
       })
       const data: prefecturesDataTypes = await response.json()
+      console.log(data)
       return data
     } catch (error) {
       console.log('情報の取得に失敗しました')

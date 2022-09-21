@@ -19,8 +19,10 @@ export interface checkedPrefecturesTypes {
 export interface prefecturesDataTypes {
   result: {
     data: {
-      value: number
-      year: number
-    }
+      data: {
+        value: number
+        year: number
+      }[]
+    }[]
   }
 }
