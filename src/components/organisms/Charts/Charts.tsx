@@ -33,6 +33,24 @@ export const Charts = ({ checkedPrefectures }: Props) => {
   }
 
   const options: {} = {
+    scales: {
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: '年度',
+          },
+        },
+      ],
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: '人口数',
+          },
+        },
+      ],
+    },
     maintainAspectRatio: false,
     plugin: {
       colorschemes: {
