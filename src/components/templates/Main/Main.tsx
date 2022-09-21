@@ -22,7 +22,7 @@ export const Main = () => {
         )}
       </section>
 
-      <section className={styles.charts}>
+      <section>
         {checkedPrefectures[0] !== undefined && <Charts checkedPrefectures={checkedPrefectures} />}
       </section>
     </div>
