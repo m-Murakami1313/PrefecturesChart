@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>都道府県別の総人口推移グラフ</title>
+        <link rel='icon' href='/favicon-16x16.png' />
       </Head>
       <header>
         <Header />
@@ -16,8 +16,6 @@ export default function Home() {
       <main>
         <Main />
       </main>
-
-      <footer></footer>
     </div>
   )
 }
