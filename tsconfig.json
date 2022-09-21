@@ -19,7 +19,7 @@
       "@/components/*": ["src/components/*"],
       "@/pages/*": ["src/pages/*"],
       "@/styles/*": ["src/styles/*"],
-      "@/hooks/*": ["src/hooks/*"],
+      "@/hooks/*": ["src/libs/hooks/*"],
       "@/types/*": ["src/types/*"],
 
     }

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { PrefecturesWithCheckBox } from '@/components/organisms/PrefecturesWithCheckBox/PrefecturesWithCheckBox'
-import { useFetchAPIData } from '@/hooks/useFetchAPIData'
-import { useFirstAPIData } from '@/hooks/useFirstAPIData'
+import { useFetchAPIData } from 'src/libs/hooks/useFetchAPIData'
+import { useFirstAPIData } from 'src/libs/hooks/useFirstAPIData'
 
 export const Main = () => {
   const { fetchData } = useFirstAPIData()
