@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import styles from './PrefecturesWithCheckBox.module.scss'
 import { CheckBoxWithLabel } from '@/components/molcules/CheckBoxWithLabel/CheckBoxWithLabel'
@@ -10,7 +10,8 @@ interface PropsTypes {
   checkedPrefectures: checkedPrefecturesTypes[]
 }
 
-export const PrefecturesWithCheckBox = ({
+// eslint-disable-next-line react/display-name
+export const PrefecturesWithCheckBox = memo(({
   prefecturesData,
   handleCheckData,
   checkedPrefectures,
@@ -28,4 +29,4 @@ export const PrefecturesWithCheckBox = ({
       ))}
     </article>
   )
-}
+})
