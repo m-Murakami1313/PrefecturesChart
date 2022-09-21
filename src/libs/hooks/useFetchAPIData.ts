@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 import { checkedPrefecturesTypes, prefecturesDataTypes } from '@/types/mainTypes'
 
@@ -17,25 +17,23 @@ export const useFetchAPIData = () => {
           ...newData,
           { prefName: e.target.value, prefCode: e.target.id, prefData: data?.result.data },
         ])
-        console.log(data)
       }
       fetchData()
     }
   }
 
-  const fetchPrectureData = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const fetchPrectureData = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
     const url = `https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?prefCode=${e.target.id}`
     try {
       const response = await fetch(url, {
         headers: { 'x-api-key': process.env.NEXT_PUBLIC_RESAS_API } as HeadersInit,
       })
       const data: prefecturesDataTypes = await response.json()
-      console.log(data)
       return data
     } catch (error) {
       console.log('情報の取得に失敗しました')
     }
-  }
+  }, [])
 
   return { handleCheckData, checkedPrefectures, fetchPrectureData }
 }
