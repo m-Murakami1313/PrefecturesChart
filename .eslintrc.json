@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "import/resolver": {
+      "typescript": { "project": "./" }
+    }
+  },
   "root": true,
   "extends": [
     "next/core-web-vitals",
