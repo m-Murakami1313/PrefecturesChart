@@ -1,29 +1,12 @@
-# Next.js + Jest
+# 都道府県別の総人口推移グラフ
 
-This example shows how to configure Jest to work with Next.js.
+## 使用技術
+- React 18.1.0
+- Nextjs 12.3.1
+- Typescript 4.6.4
+- Docker node:16.14.0
+- GithubActions
+- Sass 1.54.9
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
-
-## How to Use
-
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
-
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
-
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
-
-## Run Jest Tests
-
-```bash
-npm test
-```
+## デプロイ先
+- Vercel
